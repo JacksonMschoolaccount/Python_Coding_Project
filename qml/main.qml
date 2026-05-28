@@ -38,9 +38,9 @@ ApplicationWindow {
     }
     Image{
         id: image
-        width: 474
+        width: 274
         height: 266
-        source: "./Images/th.png/"
+        source: "./Images/th.png"
     }
 
 }
