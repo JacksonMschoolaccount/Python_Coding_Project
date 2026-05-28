@@ -5,7 +5,7 @@ import QtQuick.Controls.Material
 
 ApplicationWindow {
     id: window
-    width: 400
+    width: 700
     height: 500
     visible: true
     title: qsTr("Test app")
@@ -40,7 +40,7 @@ ApplicationWindow {
         id: image
         width: 474
         height: 266
-        source: "./PySide6_GUI_Programming/Images/th.png/"
+        source: "./Images/th.png/"
     }
 
 }
