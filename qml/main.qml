@@ -38,9 +38,9 @@ ApplicationWindow {
     }
     Image{
         id: image
-        width: 300
-        height: 120
-        source: "../Images/th.png/"
+        width: 474
+        height: 266
+        source: "./PySide6_GUI_Programming/Images/th.png/"
     }
 
 }
