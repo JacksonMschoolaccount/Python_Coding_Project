@@ -36,6 +36,12 @@ ApplicationWindow {
 
 
     }
+    Image{
+        id: image
+        width: 300
+        height: 120
+        source: "../Images/th.png/"
+    }
 
 }
 
