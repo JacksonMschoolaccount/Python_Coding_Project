@@ -26,7 +26,7 @@ ApplicationWindow {
         radius: 10
 
         Text {
-        text: qsTr("Welcome!")
+        text: qsTr("My Name is Willem Dafoe!")
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         horizontalAlignment: Text.AlignHCenter
@@ -41,9 +41,16 @@ ApplicationWindow {
         width: 274
         height: 266
         source: "./Images/th.png"
+        anchors{
+            left: parent.left
+            right: parent.right
+            top: parent.top
+            margins: 70
+        }
     }
 
 }
+
 
 
 
