@@ -48,6 +48,29 @@ ApplicationWindow {
             margins: 70
         }
     }
+    TextField{
+        id: textfield
+        width: 300
+        text: qsTr("")
+        selectByMouse: true
+        placeholderText: qsTr ("Your Username or Email")
+        verticalAlignment: AlignVCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: image.bottom
+        anchors.topMargin: 60
+    }
+        TextField{
+        id: passwordfield
+        width: 300
+        text: qsTr("")
+        selectByMouse: true
+        placeholderText: qsTr ("Your Username or Email")
+        verticalAlignment: AlignVCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: textfield.bottom
+        anchors.topMargin: 10
+        echoMode: TextInput.Password
+    }
 
 }
 
