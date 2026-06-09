@@ -13,6 +13,21 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
 
+    QtObject{
+        id: internal
+        property string user: ""
+        property string pass: ""
+
+        function checkLogin(username, password) {
+            if(username === user && password === pass){
+                var component = Qt.createComponent("app.qml")
+                var win = component.createObject()
+                win.show()
+                visible = false
+            }
+        }
+    }
+
     Rectangle{
         id: topBar
         height: 40
@@ -26,21 +41,25 @@ ApplicationWindow {
         radius: 10
 
         Text {
-        text: qsTr("My Name is Willem Dafoe!")
+        text: qsTr("Welcome user to my quiz about the effects of AI datacenters! To start, Please login using your user ID and username.")
         anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        color: "#ffffff"
+        color: '#ffffff'
         }
 
 
     }
-    Image{
-        id: image
-        width: 274
-        height: 266
-        source: "./Images/th.png"
+
+    
+    TextField{
+        id: usernamefield
+        width: 300
+        text: qsTr("")
+        selectByMouse: true
+        placeholderText: qsTr ("Your Username or Email")
+        verticalAlignment: AlignVCenter
         anchors{
             left: parent.left
             right: parent.right
@@ -48,32 +67,35 @@ ApplicationWindow {
             margins: 70
         }
     }
+    
     TextField{
-        id: textfield
-        width: 300
-        text: qsTr("")
-        selectByMouse: true
-        placeholderText: qsTr ("Your Username or Email")
-        verticalAlignment: AlignVCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: image.bottom
-        anchors.topMargin: 60
-    }
-        TextField{
         id: passwordfield
         width: 300
         text: qsTr("")
         selectByMouse: true
-        placeholderText: qsTr ("Your Username or Email")
+        placeholderText: qsTr ("Your Password")
         verticalAlignment: AlignVCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: textfield.bottom
+        anchors.top: usernamefield.bottom
         anchors.topMargin: 10
         echoMode: TextInput.Password
     }
 
+    CheckBox{
+        id: checkbox
+        text: qsTr ("Save Password")
+        anchors.top: passwordfield.bottom
+        anchors.topMargin: 10
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    Button{
+        id: buttonLogin
+        width: 300
+        text: qsTr("Login")
+        anchors.top: checkbox.bottom
+        anchors.topMargin: 10
+        anchors.horizontalCenter: parent.horizontalCenter
+        onClicked: internal.checkLogin(usernamefield.text, passwordfield.text)
+    }
 }
-
-
-
-
