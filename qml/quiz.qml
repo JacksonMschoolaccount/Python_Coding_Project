@@ -13,4 +13,27 @@ ApplicationWindow {
 
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
+
+        Rectangle{
+        id: topBar
+        height: 200
+        color: '#25283a'
+        anchors{
+            left: parent.left
+            right: parent.right
+            top: parent.top
+            margins: 10
+        }
+        radius: 10
+        }
+
+            Text{
+                text: qsTr(question_one)
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                color: '#cef9cb'
+            }
+
 }

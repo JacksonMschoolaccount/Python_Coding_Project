@@ -18,3 +18,4 @@ if __name__ == "__main__":
 
 
 #Question and answer lists
+List_of_questions = ([{question_one = ("how much water is used per kilowatt hour used to cool computers inside of Datacenters (as of august 2026)?")}, {question_two = "How much energy does AI use daily (as of august 2026)?"}, {question_three = "how many jobs have been replaced by AI (as of august 2026)?"}, {question_four = ""}, {question_five = ""}, {question_six = ""}, {question_seven = ""}, {question_eight = ""}, {question_nine = ""}, {question_ten = ""}, {question_eleven = ""}, {question_twelve = ""}, {question_thirteen = ""}, {question_fourteen = ""}, {question_fifteen = ""}])

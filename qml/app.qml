@@ -27,7 +27,7 @@ ApplicationWindow {
         Rectangle{
         id: topBar
         height: 200
-        color: '#0d0f1a'
+        color: '#25283a'
         anchors{
             left: parent.left
             right: parent.right
@@ -38,12 +38,12 @@ ApplicationWindow {
         
 
             Text{
-                text: qsTr("Welcome to the AI Datacenter quiz!. This quiz is in relation to the negative effects of AI Datacenters.\n There is a list of __ questions that all have 4 potential answers.\n The questions will be presented in randomised order and the answers will be randomised within their 4x4 grid.\n You have as much time as you need.\n You will recieve a score at the end, the score is calculated based on correct answers and time taken.\n That score will then be added to the leaderboard.\n Good luck and have fun!")
+                text: qsTr("Welcome to the AI Datacenter quiz!. This quiz is in relation to the negative effects of AI Datacenters.\n There is a list of 15 questions that all have 4 potential answers.\n The questions will be presented in randomised order and the answers will be randomised within their 4x4 grid.\n You have as much time as you need.\n You will recieve a score at the end, the score is calculated based on correct answers and time taken.\n That score will then be added to the leaderboard.\n Good luck and have fun!")
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                color: '#0e7007'
+                color: '#cef9cb'
             }
         }
             Button {
