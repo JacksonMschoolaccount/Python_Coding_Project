@@ -3,7 +3,6 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
 
-
 ApplicationWindow {
     id: window
     width: 700
@@ -13,6 +12,17 @@ ApplicationWindow {
 
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
+
+    QtObject{
+        id: bridgeQuiz
+        function startQuiz(){
+            var component = Qt.createComponent("quiz.qml")
+            var win = component.createObject()
+            win.show()
+            visible = false
+        }
+
+    }
 
         Rectangle{
         id: topBar
@@ -42,8 +52,9 @@ ApplicationWindow {
                 text: qsTr("Let's go!")
                 anchors.top: topBar.bottom
                 anchors.topMargin: 10
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.leftMargin: 10
+                anchors.left: parent.left
+                anchors.leftMargin: 205
+                onClicked: bridgeQuiz.startQuiz()
             }
 
             Button {
@@ -54,6 +65,9 @@ ApplicationWindow {
                 anchors.topMargin: 10
                 anchors.left: lesgobutton.right 
                 anchors.leftMargin: 5
+                onClicked: Qt.quit()
+
+
             }
 
         
