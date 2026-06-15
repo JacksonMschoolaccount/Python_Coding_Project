@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
-import main.py
 
 ApplicationWindow {
     id: window

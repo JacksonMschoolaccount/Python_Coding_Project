@@ -16,10 +16,9 @@ ApplicationWindow {
     QtObject{
         id: internal
         property string user: ""
-        property string pass: ""
 
-        function checkLogin(username, password) {
-            if(username === user && password === pass){
+        function checkLogin(username) {
+            if(username === user){
                 var component = Qt.createComponent("app.qml")
                 var win = component.createObject()
                 win.show()
@@ -68,23 +67,10 @@ ApplicationWindow {
         }
     }
     
-    TextField{
-        id: passwordfield
-        width: 300
-        text: qsTr("")
-        selectByMouse: true
-        placeholderText: qsTr ("Your Password")
-        verticalAlignment: AlignVCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: usernamefield.bottom
-        anchors.topMargin: 10
-        echoMode: TextInput.Password
-    }
-
     CheckBox{
         id: checkbox
         text: qsTr ("Save Password")
-        anchors.top: passwordfield.bottom
+        anchors.top: usernamefield.bottom
         anchors.topMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
     }
@@ -96,6 +82,6 @@ ApplicationWindow {
         anchors.top: checkbox.bottom
         anchors.topMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
-        onClicked: internal.checkLogin(usernamefield.text, passwordfield.text)
+        onClicked: internal.checkLogin(usernamefield.text)
     }
 }

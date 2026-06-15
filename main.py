@@ -20,9 +20,9 @@ if __name__ == "__main__":
 #Question and answer lists
 question_one = "how much water is used per kilowatt hour used to cool computers inside of Datacenters (as of august 2026)?"
 question_two = "How much energy does AI use daily (as of august 2026)?"
-question_three = "how many jobs have been replaced by AI (as of august 2026)?"
-question_four = ""
-question_five = ""
+question_three = "how many jobs have been replaced/displaced by AI (as of august 2026)?"
+question_four = "how many new or reshaped jobs is AI (supposedly) going to provide (as of august 2026)"
+question_five = "how much money has been spent on AI (as of august 2026)"
 question_six = ""
 question_seven = ""
 question_eight = ""
