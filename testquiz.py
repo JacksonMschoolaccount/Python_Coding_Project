@@ -36,8 +36,10 @@ q_15 = ["", "", "", ""]
 good_points = 0
 bad_points = 0
 points_total = 0
-chosen_q = random.randint(1, 15)
+q = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+random.shuffle(q)
 while points_total != 15:
+    chosen_q = q.pop()
     if chosen_q == 1:
         print(list_of_questions[0])
         a_1 = int(input(f"(answer question using 1, 2, 3, or 4) {q_1}"))
@@ -60,6 +62,7 @@ while points_total != 15:
         else:
             print("no")
             bad_points = bad_points + 1
+
 
         list_of_questions.pop(1)
     elif chosen_q == 3:
@@ -96,6 +99,7 @@ while points_total != 15:
         else:
             print("no")
             bad_points = bad_points + 1
+
 
         list_of_questions.pop(4)
     elif chosen_q == 6:
