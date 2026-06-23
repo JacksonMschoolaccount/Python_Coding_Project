@@ -1,3 +1,4 @@
+#remaining: add questions for 13 14 15, add answers to questions, add timer
 import random
 
 #Question and answer lists
