@@ -13,9 +13,9 @@ question_nine = "what company has invested the most money into AI development?"
 question_ten = "How is AI (mostly) used in business?"
 question_eleven = "How many commercially available AI models are active?"
 question_twelve = "How is AI (mostly) used industrially?"
-question_thirteen = ""
-question_fourteen = ""
-question_fifteen = ""
+question_thirteen = "placeholder"
+question_fourteen = "placeholder"
+question_fifteen = "placeholder"
 list_of_questions = [question_one, question_two, question_three, question_four, question_five, question_six, question_seven, question_eight, question_nine, question_ten, question_eleven, question_twelve, question_thirteen, question_fourteen, question_fifteen]
 q_1 = ["", "", "", ""]
 q_2 = ["", "", "", ""]
@@ -51,7 +51,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(0)
     elif chosen_q == 2:
         print(list_of_questions[1])
         a_2 = int(input(f"(answer question using 1, 2, 3, or 4) {q_2}"))
@@ -63,8 +62,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-
-        list_of_questions.pop(1)
     elif chosen_q == 3:
         print(list_of_questions[2])
         a_3 = int(input(f"(answer question using 1, 2, 3, or 4) {q_3}"))
@@ -76,7 +73,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(2)
     elif chosen_q == 4:
         print(list_of_questions[3])
         a_4 = int(input(f"(answer question using 1, 2, 3, or 4) {q_4}"))
@@ -88,7 +84,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(3)
     elif chosen_q == 5:
         print(list_of_questions[4])
         a_5 = int(input(f"(answer question using 1, 2, 3, or 4) {q_5}"))
@@ -100,8 +95,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-
-        list_of_questions.pop(4)
     elif chosen_q == 6:
         print(list_of_questions[5])
         a_6 = int(input(f"(answer question using 1, 2, 3, or 4) {q_6}"))
@@ -113,7 +106,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(5)
     elif chosen_q == 7:
         print(list_of_questions[6])
         a_7 = int(input(f"(answer question using 1, 2, 3, or 4) {q_7}"))
@@ -125,7 +117,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(6)
     elif chosen_q == 8:
         print(list_of_questions[7])
         a_8 = int(input(f"(answer question using 1, 2, 3, or 4) {q_8}"))
@@ -137,7 +128,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(7)
     elif chosen_q == 9:
         print(list_of_questions[8])
         a_9 = int(input(f"(answer question using 1, 2, 3, or 4) {q_9}"))
@@ -149,7 +139,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(8)
     elif chosen_q == 10:
         print(list_of_questions[9])
         a_10 = int(input(f"(answer question using 1, 2, 3, or 4) {q_10}"))
@@ -161,7 +150,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(9)
     elif chosen_q == 11:
         print(list_of_questions[10])
         a_11 = int(input(f"(answer question using 1, 2, 3, or 4) {q_11}"))
@@ -173,7 +161,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(10)
     elif chosen_q == 12:
         print(list_of_questions[11])
         a_12 = int(input(f"(answer question using 1, 2, 3, or 4) {q_12}"))
@@ -185,7 +172,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(11)
     elif chosen_q == 13:
         print(list_of_questions[12])
         a_13 = int(input(f"(answer question using 1, 2, 3, or 4) {q_13}"))
@@ -197,7 +183,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(12)
     elif chosen_q == 14:
         print(list_of_questions[13])
         a_14 = int(input(f"(answer question using 1, 2, 3, or 4) {q_14}"))
@@ -209,7 +194,6 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(13)
     elif chosen_q == 15:
         print(list_of_questions[14])
         a_15 = int(input(f"(answer question using 1, 2, 3, or 4) {q_15}"))
@@ -221,7 +205,7 @@ while points_total != 15:
             print("no")
             bad_points = bad_points + 1
 
-        list_of_questions.pop(14)
     points_total = good_points + bad_points
-        
+print(good_points)
+print(bad_points)
         
