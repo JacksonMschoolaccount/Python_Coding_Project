@@ -1,8 +1,12 @@
 #remaining: add questions for 13 14 15, add answers to questions, add timer
 import random
+import time
+
+#starting the timer
+start_time = time.time()
 
 #Question and answer lists
-question_one = "how much water is used per kilowatt hour used to cool computers inside of Datacenters (as of august 2026)?"
+question_one = "how much water is used daily to cool computers inside of Datacenters (as of august 2026)?"
 question_two = "How much energy does AI use daily (as of august 2026)?"
 question_three = "how many jobs have been replaced/displaced by AI (as of august 2026)?"
 question_four = "how many new or reshaped jobs is AI (supposedly) going to provide?"
@@ -18,7 +22,7 @@ question_thirteen = "placeholder"
 question_fourteen = "placeholder"
 question_fifteen = "placeholder"
 list_of_questions = [question_one, question_two, question_three, question_four, question_five, question_six, question_seven, question_eight, question_nine, question_ten, question_eleven, question_twelve, question_thirteen, question_fourteen, question_fifteen]
-q_1 = ["", "", "", ""]
+q_1 = ["up to 1 miliion gallons", "up to 5 million gallons", "up to 100 thousand gallons", "up to 6000 gallons"]
 q_2 = ["", "", "", ""]
 q_3 = ["", "", "", ""]
 q_4 = ["", "", "", ""]
@@ -34,12 +38,16 @@ q_13 = ["", "", "", ""]
 q_14 = ["", "", "", ""]
 q_15 = ["", "", "", ""]
 
+#variables
 good_points = 0
 bad_points = 0
 points_total = 0
 q = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+#shuffle questions and start loop
 random.shuffle(q)
 while points_total != 15:
+    #quiz
     chosen_q = q.pop()
     if chosen_q == 1:
         print(list_of_questions[0])
@@ -207,6 +215,19 @@ while points_total != 15:
             bad_points = bad_points + 1
 
     points_total = good_points + bad_points
+
+
+#calculate and print score, print correct and incorrect answers, print time taken, etc
 print(good_points)
 print(bad_points)
-        
+end_time = time.time()
+tota_time = end_time - start_time
+total_time = round(tota_time, 2)
+positiveworth = good_points * 500
+negativeworth = bad_points * 250
+score = (positiveworth - negativeworth) / total_time
+print(f'total time elapsed: {total_time} seconds')
+if score > 1:
+    print(score)
+else:
+    print('<1')
