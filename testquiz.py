@@ -49,6 +49,8 @@ random.shuffle(q)
 while points_total != 15:
     #quiz
     chosen_q = q.pop()
+
+    #common if statement. This makes it so that the program asks the question and gives a list of potential answers, then checks to see the the answer is correct before adding the correct or incorrect input given to their own individual counters. For unexpected variables (above 4) it also counts it as a wrong answer and tells the user 'no'. The if is used to make sure that a particular question only shows when it is next in randomised list.
     if chosen_q == 1:
         print(list_of_questions[0])
         a_1 = int(input(f"(answer question using 1, 2, 3, or 4) {q_1}"))
@@ -92,6 +94,7 @@ while points_total != 15:
         else:
             print("no")
             bad_points = bad_points + 1
+
 
     elif chosen_q == 5:
         print(list_of_questions[4])
@@ -228,6 +231,6 @@ negativeworth = bad_points * 250
 score = (positiveworth - negativeworth) / total_time
 print(f'total time elapsed: {total_time} seconds')
 if score > 1:
-    print(score)
+    print(f'your final score is: {round(score, 2)}')
 else:
-    print('<1')
+    print('your final score: <1')

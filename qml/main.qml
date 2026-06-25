@@ -57,7 +57,7 @@ ApplicationWindow {
         width: 300
         text: qsTr("")
         selectByMouse: true
-        placeholderText: qsTr ("Your Username or Email")
+        placeholderText: qsTr ("Please inupt your unique user code to start")
         verticalAlignment: AlignVCenter
         anchors{
             left: parent.left
