@@ -31,7 +31,7 @@ ApplicationWindow {
         }
 
             Text{
-                text: qsTr(question_one)
+                text: qsTr('question_one')
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Text.AlignHCenter
