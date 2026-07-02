@@ -1,10 +1,14 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Material
 
 ApplicationWindow {
     visible: true
     width: 400
     height: 400
+
+    Material.theme: Material.Dark
+    Material.accent: Material.LightBlue
 
     StackView {
         id: stackView
