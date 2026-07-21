@@ -10,33 +10,74 @@ ApplicationWindow {
     width: 700
     height: 500
     visible: true
-    title: qsTr("best app")
+    title: qsTr("quite quizzical")
 
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
 
-        Rectangle{
-        id: topBar
-        height: 200
-        color: '#25283a'
-        
-        
-        anchors{
-            left: parent.left
-            right: parent.right
-            top: parent.top
-            margins: 10
-        }
-        radius: 10
-        }
+    StackView{
+        id: stickystacky
+        anchors.fill: parent
+        initialItem: qaone
 
-            Text{
-                text: qsTr('question_one')
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                color: '#cef9cb'
+        Component {
+            id: qaone
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height:250
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: 250
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        text: "answer1"
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: 350
+                        height: 125
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        text: "answer2"
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        text: "answer3"
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        text: "answer4"
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                }
             }
-
+        }
+        Component {
+            id: settingsPage
+            Rectangle {
+                height: 250
+                anchors.bottom: parent.bottom
+                Button {
+                    text: "Go Back"
+                    anchors.centerIn: parent
+                    onClicked: stickystacky.pop()
+                }
+            }
+        }
+    }
 }
