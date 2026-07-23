@@ -18,16 +18,16 @@ ApplicationWindow {
     StackView{
         id: stickystacky
         anchors.fill: parent
-        initialItem: qaone
+        initialItem: qa_1
 
         Component {
-            id: qaone
+            id: qa_1
 
             Item {
                 anchors.fill: parent
                 
                 Rectangle {
-                    height:250
+                    height: parent.height/2
                     width: parent.width
                     color: '#2d2d2d'
                     Text {
@@ -37,45 +37,1021 @@ ApplicationWindow {
                     }
                 }
                 Rectangle {
-                    height: 250
+                    height: parent.height/2
                     anchors.bottom: parent.bottom
                     width: parent.width
                     Button {
-                        text: "answer1"
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
                         anchors.right: parent.right
                         anchors.bottom: parent.bottom
-                        width: 350
-                        height: 125
+                        width: parent.width/2
+                        height: parent.height/2
 
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_2)
                     }
                     Button {
-                        text: "answer2"
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
                         anchors.left: parent.left
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_2)
+                        width: parent.width/2
+                        height: parent.height/2
                     }
                     Button {
-                        text: "answer3"
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
                         anchors.right: parent.right
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_2)
+                        width: parent.width/2
+                        height: parent.height/2
                     }
                     Button {
-                        text: "answer4"
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
                         anchors.bottom: parent.bottom
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa)
+                        width: parent.width/2
+                        height: parent.height/2
                     }
                 }
             }
         }
         Component {
-            id: settingsPage
-            Rectangle {
-                height: 250
-                anchors.bottom: parent.bottom
-                Button {
-                    text: "Go Back"
-                    anchors.centerIn: parent
-                    onClicked: stickystacky.pop()
+            id: qa_2
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(qa_3)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+        Component {
+            id: qa_3
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+        Component {
+            id: qa_4
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_5
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_6
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_7
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_8
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_9
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_10
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_11
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_12
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_13
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_14
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                }
+            }
+        }
+    Component {
+            id: qa_15
+
+            Item {
+                anchors.fill: parent
+                
+                Rectangle {
+                    height: parent.height/2
+                    width: parent.width
+                    color: '#2d2d2d'
+                    Text {
+                        text: qsTr("Question 1")
+                        color: '#ffffff'
+                        anchors.centerIn: parent
+                    }
+                }
+                Rectangle {
+                    height: parent.height/2
+                    anchors.bottom: parent.bottom
+                    width: parent.width
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        width: parent.width/2
+                        height: parent.height/2
+
+                        onClicked: stickystacky.push(settingsPage)
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.left: parent.left
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.right: parent.right
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
+                    Button {
+                        Text{
+                            text: "answer1"
+                            color: "#000000"
+                            anchors.centerIn: parent
+                        }
+                        anchors.bottom: parent.bottom
+                        onClicked: stickystacky.push(settingsPage)
+                        width: parent.width/2
+                        height: parent.height/2
+                    }
                 }
             }
         }
