@@ -82,7 +82,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: stickystacky.push(qa)
+                        onClicked: stickystacky.push(qa_2)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -129,7 +129,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_3)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -140,7 +140,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.right: parent.right
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_3)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -151,7 +151,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_3)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -189,7 +189,7 @@ ApplicationWindow {
                         width: parent.width/2
                         height: parent.height/2
 
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_4)
                     }
                     Button {
                         Text{
@@ -198,7 +198,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: stickystacky.push(settingsPage)
+                        onClicked: stickystacky.push(qa_4)
                         width: parent.width/2
                         height: parent.height/2
                     }
