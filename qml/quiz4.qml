@@ -16,9 +16,9 @@ ApplicationWindow {
     Material.accent: Material.LightBlue
 
     QtObject{
-        id: bridgeQuizprt2
-        function startQuizprt2(){
-            var component = Qt.createComponent("quiz2.qml")
+        id: bridgeQuizend
+        function endQuiz(){
+            var component = Qt.createComponent("endscreen.qml")
             var win = component.createObject()
             win.show()
             visible = false
@@ -28,10 +28,10 @@ ApplicationWindow {
     StackView{
         id: stickystacky
         anchors.fill: parent
-        initialItem: qa_1
+        initialItem: qa_9
 
         Component {
-            id: qa_1
+            id: qa_13
 
             Item {
                 anchors.fill: parent
@@ -41,7 +41,7 @@ ApplicationWindow {
                     width: parent.width
                     color: '#2d2d2d'
                     Text {
-                        text: qsTr("Question 1")
+                        text: qsTr("Question 13")
                         color: '#ffffff'
                         anchors.centerIn: parent
                     }
@@ -61,7 +61,7 @@ ApplicationWindow {
                         width: parent.width/2
                         height: parent.height/2
 
-                        onClicked: stickystacky.push(qa_2)
+                        onClicked: stickystacky.push(qa_14)
                     }
                     Button {
                         Text{
@@ -70,7 +70,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: stickystacky.push(qa_2)
+                        onClicked: stickystacky.push(qa_14)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -81,7 +81,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.right: parent.right
-                        onClicked: stickystacky.push(qa_2)
+                        onClicked: stickystacky.push(qa_14)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -92,7 +92,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: stickystacky.push(qa_2)
+                        onClicked: stickystacky.push(qa_14)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -100,7 +100,7 @@ ApplicationWindow {
             }
         }
         Component {
-            id: qa_2
+            id: qa_14
 
             Item {
                 anchors.fill: parent
@@ -110,7 +110,7 @@ ApplicationWindow {
                     width: parent.width
                     color: '#2d2d2d'
                     Text {
-                        text: qsTr("Question 2")
+                        text: qsTr("Question 14")
                         color: '#ffffff'
                         anchors.centerIn: parent
                     }
@@ -130,7 +130,7 @@ ApplicationWindow {
                         width: parent.width/2
                         height: parent.height/2
 
-                        onClicked: stickystacky.push(qa_3)
+                        onClicked: stickystacky.push(qa_15)
                     }
                     Button {
                         Text{
@@ -139,7 +139,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: stickystacky.push(qa_3)
+                        onClicked: stickystacky.push(qa_15)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -150,7 +150,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.right: parent.right
-                        onClicked: stickystacky.push(qa_3)
+                        onClicked: stickystacky.push(qa_15)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -161,7 +161,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: stickystacky.push(qa_3)
+                        onClicked: stickystacky.push(qa_15)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -169,7 +169,7 @@ ApplicationWindow {
             }
         }
         Component {
-            id: qa_3
+            id: qa_15
 
             Item {
                 anchors.fill: parent
@@ -179,7 +179,7 @@ ApplicationWindow {
                     width: parent.width
                     color: '#2d2d2d'
                     Text {
-                        text: qsTr("Question 3")
+                        text: qsTr("Question 15")
                         color: '#ffffff'
                         anchors.centerIn: parent
                     }
@@ -199,7 +199,7 @@ ApplicationWindow {
                         width: parent.width/2
                         height: parent.height/2
 
-                        onClicked: stickystacky.push(qa_4)
+                        onClicked: stickystacky.push(settingsPage)
                     }
                     Button {
                         Text{
@@ -208,7 +208,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: stickystacky.push(qa_4)
+                        onClicked: stickystacky.push(settingsPage)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -219,7 +219,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.right: parent.right
-                        onClicked: stickystacky.push(qa_4)
+                        onClicked: stickystacky.push(settingsPage)
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -230,75 +230,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: stickystacky.push(qa_4)
-                        width: parent.width/2
-                        height: parent.height/2
-                    }
-                }
-            }
-        }
-        Component {
-            id: qa_4
-
-            Item {
-                anchors.fill: parent
-                
-                Rectangle {
-                    height: parent.height/2
-                    width: parent.width
-                    color: '#2d2d2d'
-                    Text {
-                        text: qsTr("Question 4")
-                        color: '#ffffff'
-                        anchors.centerIn: parent
-                    }
-                }
-                Rectangle {
-                    height: parent.height/2
-                    anchors.bottom: parent.bottom
-                    width: parent.width
-                    Button {
-                        Text{
-                            text: "answer1"
-                            color: "#000000"
-                            anchors.centerIn: parent
-                        }
-                        anchors.right: parent.right
-                        anchors.bottom: parent.bottom
-                        width: parent.width/2
-                        height: parent.height/2
-                        onClicked: bridgeQuizprt2.startQuizprt2()
-                    }
-                    Button {
-                        Text{
-                            text: "answer1"
-                            color: "#000000"
-                            anchors.centerIn: parent
-                        }
-                        anchors.left: parent.left
-                        onClicked: bridgeQuizprt2.startQuizprt2()
-                        width: parent.width/2
-                        height: parent.height/2
-                    }
-                    Button {
-                        Text{
-                            text: "answer1"
-                            color: "#000000"
-                            anchors.centerIn: parent
-                        }
-                        anchors.right: parent.right
-                        onClicked: bridgeQuizprt2.startQuizprt2()
-                        width: parent.width/2
-                        height: parent.height/2
-                    }
-                    Button {
-                        Text{
-                            text: "answer1"
-                            color: "#000000"
-                            anchors.centerIn: parent
-                        }
-                        anchors.bottom: parent.bottom
-                        onClicked: bridgeQuizprt2.startQuizprt2()
+                        onClicked: stickystacky.push(settingsPage)
                         width: parent.width/2
                         height: parent.height/2
                     }
