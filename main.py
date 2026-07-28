@@ -16,4 +16,3 @@ if __name__ == "__main__":
         sys.exit(-1)
     sys.exit(app.exec())
 '''Note: don't use a  loader'''
-'''Note 2: don't compress the windows too much, they will crash and you will have to kill the terminal to run the program again'''

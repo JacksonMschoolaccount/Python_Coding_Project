@@ -15,6 +15,8 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
 
+    Loader {id: bridgeToPrt2}
+
     QtObject{
         id: bridgeQuizprt2
         function startQuizprt2(){
@@ -267,7 +269,7 @@ ApplicationWindow {
                         anchors.bottom: parent.bottom
                         width: parent.width/2
                         height: parent.height/2
-                        onClicked: bridgeQuizprt2.startQuizprt2()
+                        onClicked: bridgeToPrt2.source = "quiz2.qml"
                     }
                     Button {
                         Text{
@@ -276,7 +278,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: bridgeQuizprt2.startQuizprt2()
+                        onClicked: bridgeToPrt2.source = "quiz2.qml"
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -287,7 +289,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.right: parent.right
-                        onClicked: bridgeQuizprt2.startQuizprt2()
+                        onClicked: bridgeToPrt2.source = "quiz2.qml"
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -298,7 +300,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: bridgeQuizprt2.startQuizprt2()
+                        onClicked: bridgeToPrt2.source = "quiz2.qml"
                         width: parent.width/2
                         height: parent.height/2
                     }
