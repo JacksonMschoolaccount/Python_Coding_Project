@@ -3,7 +3,6 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
 
-//to create a random effect use this code (fix later cause this will probably work but won't work as intended) onClicked: mainloader.source = "qml" + Math.ceil(Math.random() * 5) + ".qml"
 
 ApplicationWindow {
     id: window
@@ -17,8 +16,8 @@ ApplicationWindow {
 
     QtObject{
         id: bridgeQuizprt3
-        function startQuizprt3(){
-            var component = Qt.createComponent("quiz3.qml")
+        function endQuiz(){
+            var component = Qt.createComponent("finish.qml")
             var win = component.createObject()
             win.show()
             visible = false
@@ -266,7 +265,7 @@ ApplicationWindow {
                         anchors.bottom: parent.bottom
                         width: parent.width/2
                         height: parent.height/2
-                        onClicked: bridgeQuizprt3.startQuizprt3()
+                        onClicked: bridgeQuizprt3.endQuiz()
                     }
                     Button {
                         Text{
@@ -275,7 +274,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.left: parent.left
-                        onClicked: bridgeQuizprt3.startQuizprt3()
+                        onClicked: bridgeQuizprt3.endQuiz()
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -286,7 +285,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.right: parent.right
-                        onClicked: bridgeQuizprt3.startQuizprt3()
+                        onClicked: bridgeQuizprt3.endQuiz()
                         width: parent.width/2
                         height: parent.height/2
                     }
@@ -297,7 +296,7 @@ ApplicationWindow {
                             anchors.centerIn: parent
                         }
                         anchors.bottom: parent.bottom
-                        onClicked: bridgeQuizprt3.startQuizprt3()
+                        onClicked: bridgeQuizprt3.endQuiz()
                         width: parent.width/2
                         height: parent.height/2
                     }

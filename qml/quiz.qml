@@ -3,7 +3,6 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
 
-//to create a random effect use this code (fix later cause this will probably work but won't work as intended) onClicked: mainloader.source = "qml" + Math.ceil(Math.random() * 5) + ".qml"
 
 ApplicationWindow {
     id: window
