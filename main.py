@@ -1,7 +1,9 @@
 import sys
 import os
+import time
 
 #import modules
+from PySide6.QtCore import QObject, Property, Signal
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 
