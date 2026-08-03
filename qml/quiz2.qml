@@ -14,6 +14,7 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
 
+
     QtObject{
         id: bridgeQuizprt3
         function endQuiz(){
@@ -34,7 +35,7 @@ ApplicationWindow {
 
             Item {
                 anchors.fill: parent
-                
+             
                 Rectangle {
                     height: parent.height/2
                     width: parent.width
@@ -45,6 +46,7 @@ ApplicationWindow {
                         anchors.centerIn: parent
                     }
                 }
+
                 Rectangle {
                     height: parent.height/2
                     anchors.bottom: parent.bottom
@@ -265,6 +267,7 @@ ApplicationWindow {
                         anchors.bottom: parent.bottom
                         width: parent.width/2
                         height: parent.height/2
+                        
                         onClicked: bridgeQuizprt3.endQuiz()
                     }
                     Button {

@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtQuick.Controls.Material
 
+/// The window for the application
 ApplicationWindow {
     id: window
     width: 700
@@ -13,6 +14,7 @@ ApplicationWindow {
     Material.theme: Material.Dark
     Material.accent: Material.LightBlue
 
+/// Function used to switch files
     QtObject{
         id: bridgeQuiz
         function startQuiz(){

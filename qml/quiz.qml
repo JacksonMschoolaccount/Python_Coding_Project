@@ -24,17 +24,21 @@ ApplicationWindow {
         }
     }
 
+/// Stack used for viewing mulitple questions in 1 file
     StackView{
         id: stickystacky
         anchors.fill: parent
         initialItem: qa_1
 
+/// Container for both rectangles since Stackview can only switch 1 component at a time
         Component {
             id: qa_1
 
+/// I honestly can't remember why this is important but I know that it is important because the program stops working if I delete it
             Item {
                 anchors.fill: parent
-                
+
+/// First rectangle used for holding the question  
                 Rectangle {
                     height: parent.height/2
                     width: parent.width
@@ -45,6 +49,8 @@ ApplicationWindow {
                         anchors.centerIn: parent
                     }
                 }
+
+/// Second rectangle used for holding all of the answer buttons
                 Rectangle {
                     height: parent.height/2
                     anchors.bottom: parent.bottom
@@ -59,7 +65,7 @@ ApplicationWindow {
                         anchors.bottom: parent.bottom
                         width: parent.width/2
                         height: parent.height/2
-
+                        /// Used to switch questions
                         onClicked: stickystacky.push(qa_2)
                     }
                     Button {
@@ -266,6 +272,7 @@ ApplicationWindow {
                         anchors.bottom: parent.bottom
                         width: parent.width/2
                         height: parent.height/2
+                        ///Uses previously stated function to switch file
                         onClicked: bridgeQuizprt2.startQuizprt2()
                     }
                     Button {

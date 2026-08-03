@@ -7,14 +7,14 @@ from PySide6.QtCore import QObject, Property, Signal
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 
-#Instance class
+#Instance class (open application)
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
     engine.load(os.path.join(os.path.dirname(__file__),"qml/app.qml"))
 
-    #Check exit app
+    #Check exit app (close application)
     if not engine.rootObjects():
         sys.exit(-1)
     sys.exit(app.exec())
-'''Note: don't use a  loader'''
+
