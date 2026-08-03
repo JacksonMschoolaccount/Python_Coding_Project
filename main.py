@@ -18,3 +18,8 @@ if __name__ == "__main__":
         sys.exit(-1)
     sys.exit(app.exec())
 
+
+
+test_variable = "G'day mate. Lovely day, innit?"
+
+engine.rootContext().setContextProperty("testStuff", )
