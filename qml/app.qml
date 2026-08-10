@@ -40,12 +40,17 @@ ApplicationWindow {
         
 
             Text{
-                text: qsTr("Welcome to the AI Datacenter quiz!. This quiz is in relation to the negative effects of AI Datacenters.\n There is a list of 15 questions that all have 4 potential answers.\n The questions will be presented in randomised order and the answers will be randomised within their 4x4 grid.\n You have as much time as you need.\n You will recieve a score at the end, the score is calculated based on correct answers and time taken.\n That score will then be added to the leaderboard.\n Good luck and have fun!")
+                text: "Welcome to my quiz on AI data centers.\n The quiz consists of 8 questions.\n You do not have a time limit but you will be timed.\n At the end of the quiz your score and time will be calculated into a final point total.\n All answers are correct as of August 2026.\n Good luck, have fun."
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 color: '#cef9cb'
+            }
+
+            ListView{
+                model: testStuff
+                delegate: Text {    text: modelData}
             }
         }
             Button {

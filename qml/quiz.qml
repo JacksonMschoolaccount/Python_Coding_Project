@@ -57,7 +57,7 @@ ApplicationWindow {
                     width: parent.width
                     Button {
                         Text{
-                            text: "answer1"
+                            text: "Answer 4"
                             color: "#000000"
                             anchors.centerIn: parent
                         }
@@ -81,7 +81,7 @@ ApplicationWindow {
                     }
                     Button {
                         Text{
-                            text: "answer1"
+                            text: "answer2"
                             color: "#000000"
                             anchors.centerIn: parent
                         }
@@ -92,7 +92,7 @@ ApplicationWindow {
                     }
                     Button {
                         Text{
-                            text: "answer1"
+                            text: "answer3"
                             color: "#000000"
                             anchors.centerIn: parent
                         }
