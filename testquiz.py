@@ -31,157 +31,45 @@ q_answers_9 = ["", "", "", ""]
 q_answers_10 = ["", "", "", ""]
 q_answers_11 = ["", "", "", ""]
 q_answers_12 = ["", "", "", ""]
+potential_answer_list = [q_answers_1, q_answers_2, q_answers_3, q_answers_4, q_answers_5, q_answers_6, q_answers_7, q_answers_8, q_answers_9, q_answers_10, q_answers_11, q_answers_12]
+
+q = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 
-#variables
+def chosen_answer_list():
+    print(potential_answer_list[chosen_q])
+
+def print_question(good_points, bad_points, chosen_q, correct_answers):
+            print(list_of_questions[chosen_q])
+            chosen_answer_list()
+            answer = int(input("(answer question using 1, 2, 3, or 4) "))
+            if answer == correct_answers[chosen_q]:
+                good_points += 1
+                print("correct")
+            elif answer in [1, 2, 3, 4] and answer != correct_answers[chosen_q]:
+                bad_points += 1
+                print("incorrect")
+            else:
+                print("no")
+                bad_points = bad_points + 1
+            
+            return good_points, bad_points
+
 good_points = 0
 bad_points = 0
 points_total = 0
-q = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-
-
+correct_answers = [1, 4, 2, 3, 2, 4, 1, 3, 2, 2, 1, 4]
 
 #shuffle questions and start loop
 random.shuffle(q)
-while points_total != 12:
+
+while points_total < 12:
     #quiz
     chosen_q = q.pop()
-
-    #common if statement. This makes it so that the program asks the question and gives a list of potential answers, then checks to see the the answer is correct before adding the correct or incorrect input given to their own individual counters. For unexpected variables (above 4) it also counts it as a wrong answer and tells the user 'no'. The if is used to make sure that a particular question only shows when it is next in randomised list.
-    if chosen_q == 1:
-        print(list_of_questions[0])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_1}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 2:
-        print(list_of_questions[1])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_2}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 3:
-        print(list_of_questions[2])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_3}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 4:
-        print(list_of_questions[3])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_4}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-
-    elif chosen_q == 5:
-        print(list_of_questions[4])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_5}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 6:
-        print(list_of_questions[5])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_6}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 7:
-        print(list_of_questions[6])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_7}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 8:
-        print(list_of_questions[7])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_8}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 9:
-        print(list_of_questions[8])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_9}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 10:
-        print(list_of_questions[9])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_10}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 11:
-        print(list_of_questions[10])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_11}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
-    elif chosen_q == 12:
-        print(list_of_questions[11])
-        answer = int(input(f"(answer question using 1, 2, 3, or 4) {q_answers_12}"))
-        if answer == 1:
-            good_points = good_points + 1
-        elif answer == 2 or answer == 3 or answer == 4:
-            bad_points = bad_points + 1
-        else:
-            print("no")
-            bad_points = bad_points + 1
-
+    good_points, bad_points = print_question(bad_points, good_points, chosen_q, correct_answers)
     points_total = good_points + bad_points
+
+    
 
 
 #calculate and print score, print correct and incorrect answers, print time taken, etc
